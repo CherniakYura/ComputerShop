@@ -1,0 +1,137 @@
+.containerActive {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+  width: 35%;
+  background-color: var(--primary);
+  top: 0;
+  right: 0;
+  z-index: 6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.backgroundActive {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.85;
+}
+
+.svgClose {
+  width: 19px;
+  height: 19px;
+}
+
+.close {
+  position: absolute;
+  top: 6.5%;
+  right: 14%;
+  padding: 2.5%;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.cartContentWrapper {
+  width: 100%;
+}
+
+.cartList {
+  width: 80%;
+  margin-left: 4rem;
+}
+
+.title {
+  padding: 113px 0 0;
+  font-size: 32px;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  line-height: 32px;
+  padding-left: 4rem;
+}
+
+.subtitle {
+  margin: 40px 0 0;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  font-size: 12px;
+  padding-left: 0rem;
+}
+
+.svgCart {
+  fill: #e0ddda;
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  margin: 25px 0 50px;
+  width: 90%;
+  height: 75px;
+  line-height: 75px;
+  border: 1px solid #b8b4b2;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  overflow: hidden;
+  bottom: 0;
+  left: 5%;
+  background-color: var(--primary);
+}
+
+.totalPrice {
+  margin: 25px 0 0;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.linkText {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #231f20;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.link:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #231f20;
+  position: absolute;
+  -webkit-transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  top: 75px;
+  left: 0;
+}
+
+.link:hover:before {
+  top: 0;
+}
+
+.link:hover .linkText {
+  color: var(--primary);
+}

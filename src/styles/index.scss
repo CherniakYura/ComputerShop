@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat ExtraBold";
+  src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+}
+:root {
+  --primary: #f8f4f0;
+  --secondary: #1a1a1a;
+  --shopPrimary: #231f20;
+  --shopSecondary: #f8f5f2;
+  --productImage: #f2eeeb;
+}
+html {
+    overflow-y: scroll;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     scroll-behavior: smooth;
+}

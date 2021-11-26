@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.HomeSection {
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  color: white;
+  padding: 160px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.homeTitle {
+  font-size: 48px;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+}
+
+.homeDesc {
+  font-size: 24px;
+  margin: 18px 0;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.homeLink {
+  position: relative;
+  border: none;
+  background: white;
+  color: black;
+  padding: 16px 40px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-family: "Montserrat SemiBold";
+  font-weight: 600;
+}
+
+.homeLink:hover:before {
+  -webkit-transform: translate3d(3px, 3px, 0);
+          transform: translate3d(3px, 3px, 0);
+}
+
+.homeLink:before {
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  width: 100%;
+}
