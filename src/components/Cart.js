@@ -13,6 +13,12 @@ function Cart(props) {
         : {display:"none",zIndex:"-1" };
 
 
+        useEffect(() => {
+            (props.cartContent[0])?
+            props.totalPrice=props.cartContent[0].price:
+            console.log('');   
+        }, [])
+
         const format = (amount) => {
             const formatter = new Intl.NumberFormat("en-US", {
                 style: "currency",
@@ -58,7 +64,7 @@ function Cart(props) {
                         {props.cartContent && props.cartContent.length > 0 && (
                             <div>
                                 <div className={styles.totalPrice}>
-                                    Subtotal: {format(props.totalPrice)}
+                                    Subtotal: {format(props.computeTotalPrice())}
                                 </div>
                             </div>
                         )}

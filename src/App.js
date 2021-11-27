@@ -10,29 +10,28 @@ import {
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import React, { useEffect, useState } from "react";
-import memory from "./data/memory";
+//import memory from "./data/memory";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
     const [cartActive, setCartActive] = useState(false);
-    const [cartContent, setCartContent] = useState([...memory]);
+    const [cartContent, setCartContent] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
-const updateQuantity =  (productId, quantity) => {
-    const currentCart = cartContent;
+    const updateQuantity = (productId, quantity) => {
+        const currentCart = cartContent;
 
-    if (quantity === 0) {
-         setCartContent(
-        currentCart.filter((item) => item.id !== productId)
-        );
-    } else {
-        const product = currentCart.find((item) => item.id === productId);
-        product.quantity = quantity;
-        currentCart.map((item) => (item.id === productId ? product : null));
-         setCartContent( currentCart );
-    }
+        if (quantity === 0) {
+            setCartContent(currentCart.filter((item) => item.id !== productId));
+        } else {
+            const product = currentCart.find((item) => item.id === productId);
+            product.quantity = quantity;
+            currentCart.map((item) => (item.id === productId ? product : null));
+            setCartContent(currentCart);
+        }
 
-    computeTotalPrice();
-};
+        computeTotalPrice();
+    };
 
     const computeTotalPrice = () => {
         let totalPrice = 0;
@@ -41,30 +40,31 @@ const updateQuantity =  (productId, quantity) => {
             totalPrice += priceTotal;
         });
         setTotalPrice(totalPrice.toFixed(2));
+        return totalPrice.toFixed(2);
     };
 
-   async function addToCart(product) {
-       const sameProduct = cartContent.filter(
-           (productInCart) => productInCart.id === product.id
-       );
-       const currentCart = cartContent;
-       if (sameProduct.length === 1) {
-           currentCart.map((productInCurrentCart) =>
-               productInCurrentCart.id === sameProduct[0].id
-                   ? (productInCurrentCart.quantity =
-                         productInCurrentCart.quantity + 1)
-                   : null
-           );
-           await setCartContent(currentCart);
-       } else {
-           //const currentCart = this.state.cart;
-           const productObject = product;
-           productObject.quantity = 1;
-           await setCartContent([...currentCart, productObject]);
-       }
-       computeTotalPrice();
-       setCartActive(true);
-   }
+    function addToCart(product) {
+        const sameProduct = cartContent.filter(
+            (productInCart) => productInCart.id === product.id
+        );
+        const currentCart = cartContent;
+        if (sameProduct.length === 1) {
+            currentCart.map((productInCurrentCart) =>
+                productInCurrentCart.id === sameProduct[0].id
+                    ? (productInCurrentCart.quantity =
+                          productInCurrentCart.quantity + 1)
+                    : null
+            );
+            setCartContent(currentCart);
+        } else {
+            //const currentCart = this.state.cart;
+            const productObject = product;
+            productObject.quantity = 1;
+            setCartContent([...currentCart, productObject]);
+        }
+        computeTotalPrice();
+        setCartActive(true);
+    }
 
     function activateCart() {
         setCartActive(true);
@@ -97,6 +97,11 @@ const updateQuantity =  (productId, quantity) => {
                         path="/shopping-cart/catalog/:categoryId"
                         element={<Catalog />}
                     />
+                    <Route
+                        exact
+                        path="/shopping-cart/products/:productId"
+                        element={<ProductPage addToCart={addToCart} />}
+                    />
                 </Routes>
                 <Cart
                     active={cartActive}
@@ -104,6 +109,7 @@ const updateQuantity =  (productId, quantity) => {
                     cartContent={cartContent}
                     totalPrice={totalPrice}
                     updateQuantity={updateQuantity}
+                    computeTotalPrice={computeTotalPrice}
                 />
             </div>
         </Router>
