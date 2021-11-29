@@ -9,8 +9,8 @@ function Header(props) {
     //setTheme("light")
    useEffect(() => {
        setTheme(
-           location.pathname === "/shopping-cart" ||
-               location.pathname === "/shopping-cart/"
+           location.pathname === "/" ||
+               location.pathname === ""
                ? "light"
                : "dark"
        );
@@ -20,7 +20,7 @@ function Header(props) {
         <header className={styles.container}>
             <Link
                 className={theme === "light" ? styles.logo : styles.logoBlack}
-                to="/shopping-cart"
+                to="/"
             >
                 Core Components
             </Link>

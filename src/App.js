@@ -84,7 +84,7 @@ function App() {
                 <Routes>
                     <Route
                         exact
-                        path="/shopping-cart/"
+                        path="/"
                         element={<HomePage />}
                     />
                     <Route
