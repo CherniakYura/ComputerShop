@@ -2,7 +2,7 @@ import HomePage from "./pages/HomePage";
 import Catalog from "./pages/ShopPage";
 import "./styles/App.css";
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Routes,

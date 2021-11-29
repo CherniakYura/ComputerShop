@@ -20,7 +20,7 @@ function Header(props) {
         <header className={styles.container}>
             <Link
                 className={theme === "light" ? styles.logo : styles.logoBlack}
-                to="/"
+                to=""
             >
                 Core Components
             </Link>
