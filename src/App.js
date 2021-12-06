@@ -2,7 +2,7 @@ import HomePage from "./pages/HomePage";
 import Catalog from "./pages/ShopPage";
 import "./styles/App.css";
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Switch,
     Route,
     Routes,
@@ -74,7 +74,7 @@ function App() {
         setCartActive(false);
     }
     return (
-        <Router>
+        <Router basename="/shoppingCart">
             <div className="App">
                 <Header
                     activateCart={activateCart}
@@ -82,11 +82,7 @@ function App() {
                     cartLength={cartContent.length}
                 />
                 <Routes>
-                    <Route
-                        exact
-                        path="/"
-                        element={<HomePage />}
-                    />
+                    <Route exact path="/" element={<HomePage />} />
                     <Route
                         exact
                         path="/shopping-cart/catalog"
