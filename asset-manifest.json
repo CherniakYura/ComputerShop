@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/shoppingCart/static/css/main.f4b6244f.chunk.css",
-    "main.js": "/shoppingCart/static/js/main.7afe1f54.chunk.js",
-    "main.js.map": "/shoppingCart/static/js/main.7afe1f54.chunk.js.map",
+    "main.css": "/shoppingCart/static/css/main.ccef3952.chunk.css",
+    "main.js": "/shoppingCart/static/js/main.1940c814.chunk.js",
+    "main.js.map": "/shoppingCart/static/js/main.1940c814.chunk.js.map",
     "runtime-main.js": "/shoppingCart/static/js/runtime-main.a3b23811.js",
     "runtime-main.js.map": "/shoppingCart/static/js/runtime-main.a3b23811.js.map",
     "static/js/2.505c7dcd.chunk.js": "/shoppingCart/static/js/2.505c7dcd.chunk.js",
     "static/js/2.505c7dcd.chunk.js.map": "/shoppingCart/static/js/2.505c7dcd.chunk.js.map",
     "index.html": "/shoppingCart/index.html",
-    "static/css/main.f4b6244f.chunk.css.map": "/shoppingCart/static/css/main.f4b6244f.chunk.css.map",
+    "static/css/main.ccef3952.chunk.css.map": "/shoppingCart/static/css/main.ccef3952.chunk.css.map",
     "static/js/2.505c7dcd.chunk.js.LICENSE.txt": "/shoppingCart/static/js/2.505c7dcd.chunk.js.LICENSE.txt",
     "static/media/index.css": "/shoppingCart/static/media/Montserrat-SemiBold.fa8441f3.ttf",
     "static/media/asus-rog-strix-b450f-gaming-gallery-1.101c584e.png": "/shoppingCart/static/media/asus-rog-strix-b450f-gaming-gallery-1.101c584e.png",
@@ -116,7 +116,7 @@
   "entrypoints": [
     "static/js/runtime-main.a3b23811.js",
     "static/js/2.505c7dcd.chunk.js",
-    "static/css/main.f4b6244f.chunk.css",
-    "static/js/main.7afe1f54.chunk.js"
+    "static/css/main.ccef3952.chunk.css",
+    "static/js/main.1940c814.chunk.js"
   ]
 }
