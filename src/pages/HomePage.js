@@ -15,7 +15,7 @@ const HomePage = () => {
                     <p className="homeDesc" >
                         Now available for preorder, shipping December, 2020.
                     </p>
-                    <Link className="homeLink" to="/shopping-cart/catalog">
+                    <Link className="homeLink" to="/catalog">
                         Shop now
                     </Link>
                 </section>

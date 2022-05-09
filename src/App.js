@@ -74,7 +74,7 @@ function App() {
         setCartActive(false);
     }
     return (
-        <Router basename="/shoppingCart">
+        <Router basename="/ComputerShop">
             <div className="App">
                 <Header
                     activateCart={activateCart}
@@ -85,17 +85,17 @@ function App() {
                     <Route exact path="/" element={<HomePage />} />
                     <Route
                         exact
-                        path="/shopping-cart/catalog"
+                        path="/catalog"
                         element={<Catalog />}
                     />
                     <Route
                         exact
-                        path="/shopping-cart/catalog/:categoryId"
+                        path="/catalog/:categoryId"
                         element={<Catalog />}
                     />
                     <Route
                         exact
-                        path="/shopping-cart/products/:productId"
+                        path="/products/:productId"
                         element={<ProductPage addToCart={addToCart} />}
                     />
                 </Routes>

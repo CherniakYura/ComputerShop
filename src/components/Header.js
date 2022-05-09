@@ -29,16 +29,16 @@ function Header(props) {
                     className={
                         theme === "light" ? styles.shop : styles.shopBlack
                     }
-                    to="/shopping-cart/catalog"
+                    to="/catalog"
                 >
                     Shop
                 </Link>
-                <button
+                {/* <button
                     
                     className={theme === "light" ? styles.btn : styles.btnBlack}
                 >
                     Contacts
-                </button>
+                </button> */}
                 <div className={styles.cartBtnContainer}>
                     {
                     props.cartLength > 0 &&

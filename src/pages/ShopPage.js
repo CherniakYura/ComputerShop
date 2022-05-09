@@ -70,7 +70,7 @@ const ShopPage = ({ match }) => {
                     <ul className={styles.categories}>
                         {categories.map((category) => (
                             <Link
-                                to={`/shopping-cart/catalog/${category.id}`}
+                                to={`/catalog/${category.id}`}
                                 className={styles.categoryLink}
                                 key={category.id}
                             >
@@ -84,61 +84,7 @@ const ShopPage = ({ match }) => {
                 <main className={styles.main}>
                     <ul className={styles.productList}>
                         <Routes>
-                            {/* <Route
-                                exact
-                                path="/gff"
-                                element={
-                                    allProducts &&
-                                    allProducts.map((product) => (
-                                        <li
-                                            key={product.id}
-                                            className={styles.product}
-                                        >
-                                            <Link
-                                                to={`/shopping-cart/products/${product.id}`}
-                                                className={styles.productLink}
-                                            >
-                                                <div
-                                                    className={
-                                                        styles.productImage
-                                                    }
-                                                >
-                                                    <img
-                                                        className={
-                                                            styles.frontImage
-                                                        }
-                                                        src={product.image}
-                                                        alt={product.name}
-                                                    />
-                                                    <img
-                                                        className={
-                                                            styles.backImage
-                                                        }
-                                                        src={
-                                                            product.previewImage
-                                                        }
-                                                        alt={product.name}
-                                                    />
-                                                </div>
-                                                <div
-                                                    className={
-                                                        styles.productName
-                                                    }
-                                                >
-                                                    {product.name}
-                                                </div>
-                                                <div
-                                                    className={
-                                                        styles.productPrice
-                                                    }
-                                                >
-                                                    {format(product.price)}
-                                                </div>
-                                            </Link>
-                                        </li>
-                                    ))
-                                }
-                            /> */}
+                            
 
                             <Route
                                 exact
@@ -151,7 +97,7 @@ const ShopPage = ({ match }) => {
                                             className={styles.product}
                                         >
                                             <Link
-                                                to={`/shopping-cart/products/${product.id}`}
+                                                to={`/products/${product.id}`}
                                                 className={styles.productLink}
                                             >
                                                 <div

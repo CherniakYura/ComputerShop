@@ -87,6 +87,8 @@
   font-family: "Montserrat SemiBold";
   font-weight: 600;
   line-height: 64px;
+  mix-blend-mode: difference;
+  color: white;
   pointer-events: none;
 }
 
